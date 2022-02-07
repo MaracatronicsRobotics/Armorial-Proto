@@ -31,9 +31,12 @@ message Field {
 	float fieldWidth                     = 2;
 	float goalWidth                      = 3;
 	float goalDepth                      = 4;
-	float boundaryWidth                  = 5;
-	repeated FieldLineSegment fieldLines = 6;
-	repeated FieldCircularArc fieldArcs  = 7;
+	float defenseWidth                   = 5;
+	float defenseLength                  = 6;
+	float boundaryWidth                  = 7;
+	float centerRadius                   = 8;
+	repeated FieldLineSegment fieldLines = 9;
+	repeated FieldCircularArc fieldArcs  = 10;
 }
 
 message FieldLineSegment {
