@@ -20,10 +20,12 @@ message ControlPacket {
 	RobotIdentifier robotIdentifier = 1;
 	Velocity robotVelocity          = 2;
 	AngularSpeed robotAngularSpeed  = 3;
-	float w1                        = 4;
-	float w2                        = 5;
-	float w3                        = 6;
-	float w4                        = 7;
+	Velocity kickSpeed              = 4;
+	bool dribbling                  = 5;
+	float w1                        = 6;
+	float w2                        = 7;
+	float w3                        = 8;
+	float w4                        = 9;
 }
 
 message Field {
