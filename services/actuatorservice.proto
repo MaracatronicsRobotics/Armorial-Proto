@@ -7,5 +7,5 @@ package Actuator;
 service ActuatorService {
 	rpc SetControl(ControlPacket) returns (google.protobuf.Empty);
 	rpc SetControls(stream ControlPacket) returns (google.protobuf.Empty);
-	rpc RegisterActuator(google.protobuf.Empty) returns (stream ControlPacket);
+	rpc GetControls(google.protobuf.Empty) returns (stream ControlPacket);
 }
