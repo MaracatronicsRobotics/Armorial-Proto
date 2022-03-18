@@ -2,7 +2,8 @@ syntax = "proto3";
 
 import "messages.proto";
 import "google/protobuf/empty.proto";
-package Actuator;
+
+package Armorial.Actuator;
 
 service ActuatorService {
 	rpc SetControl(ControlPacket) returns (google.protobuf.Empty);

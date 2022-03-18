@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package Armorial;
+
 message Robot {
 	RobotIdentifier robotIdentifier = 1;
 	Position robotPosition          = 2;

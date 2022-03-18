@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "messages.proto";
 import "google/protobuf/empty.proto";
-package Coach;
+package Armorial.Coach;
 
 service CoachService {
 	rpc GetRobot(RobotIdentifier) returns (Robot);

@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "messages.proto";
 import "google/protobuf/empty.proto";
-package Vision;
+package Armorial.Vision;
 
 service VisionService {
 	rpc SetRobot(Robot) returns (google.protobuf.Empty) {}

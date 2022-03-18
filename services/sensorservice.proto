@@ -2,7 +2,7 @@ syntax = "proto3";
 
 import "messages.proto";
 import "google/protobuf/empty.proto";
-package Sensor;
+package Armorial.Sensor;
 
 service SensorService {
 	rpc SetRobotStatus(RobotStatus) returns (google.protobuf.Empty);
