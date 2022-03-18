@@ -17,10 +17,10 @@ jobs:
       - name: "Compile services grpc packets"
         run: cd services && protoc --grpc_out=../ --plugin=protoc-gen-grpc=`which grpc_cpp_plugin` *.proto && cd ..
       - name: "Compile services proto packets"
-        run: cd services && protoc && protoc --cpp_out=../ *.proto && cd ..
+        run: cd services && protoc --cpp_out=../ *.proto && cd ..
       - name: "Compile sslvision proto packets"
-        run: cd sslvision && protoc && protoc --cpp_out=../ *.proto && cd ..
+        run: cd sslvision && protoc --cpp_out=../ *.proto && cd ..
       - name: "Compile grsim proto packets"
-        run: cd grsim && protoc && protoc --cpp_out=../ *.proto && cd ..
+        run: cd grsim && protoc --cpp_out=../ *.proto && cd ..
       - name: "Compile referee proto packets"
-        run: cd referee && protoc && protoc --cpp_out=../ *.proto && cd ..
+        run: cd referee && protoc --cpp_out=../ *.proto && cd ..
