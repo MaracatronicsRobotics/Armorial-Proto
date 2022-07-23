@@ -22,7 +22,7 @@ message ControlPacket {
 	RobotIdentifier robotIdentifier = 1;
 	Velocity robotVelocity          = 2;
 	AngularSpeed robotAngularSpeed  = 3;
-	Velocity kickSpeed              = 4;
+	KickSpeed robotKick             = 4;
 	bool dribbling                  = 5;
 	float w1                        = 6;
 	float w2                        = 7;
@@ -92,6 +92,12 @@ message Velocity {
 	float vy       = 2;
 	float vz       = 3;
 	bool isInvalid = 4;
+}
+
+message KickSpeed {
+	float kickSpeed = 1;
+	float chipAngle = 2;
+	float kickAngle = 3;
 }
 
 message Acceleration {
