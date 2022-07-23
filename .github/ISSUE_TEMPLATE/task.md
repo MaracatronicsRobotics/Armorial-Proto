@@ -1,19 +1,21 @@
 ---
 name: Task
-about: Assign it to a responsible team member and to the VSSS project
+about: Create a task for this project
 title: ''
-labels: ''
+labels: 'task'
 assignees: ''
 
 ---
 
-**Description**:
-Description of the task
+**Is your task related to a feature or bug? Please describe.**
+A clear and concise description of what this task is related to. Ex. This task aims to solve (#PR_ID) [...]
 
-**Goals**:
-- [ ] Goal 1
-- [ ] Goal 2
-- [ ] Goal 3
+**Describe the solution you'd like**
+A clear and concise description of what you will work to. Please use checkboxes here.
 
-**Due date**: 
-dd / mm / 2022
+- [x] SubTask 1
+- [ ] SubTask 2 (#id)
+- [ ] SubTask 3
+
+**Additional context**
+Add any other context or screenshots about the task here.
