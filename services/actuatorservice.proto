@@ -6,7 +6,6 @@ import "google/protobuf/empty.proto";
 package Armorial.Actuator;
 
 service ActuatorService {
-	rpc SetControl(ControlPacket) returns (google.protobuf.Empty);
 	rpc SetControls(stream ControlPacket) returns (google.protobuf.Empty);
 	rpc GetControls(google.protobuf.Empty) returns (stream ControlPacket);
 }

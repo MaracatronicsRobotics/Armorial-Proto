@@ -5,7 +5,6 @@ import "google/protobuf/empty.proto";
 package Armorial.Sensor;
 
 service SensorService {
-	rpc SetRobotStatus(RobotStatus) returns (google.protobuf.Empty);
-	rpc SetAllRobotStatus(stream RobotStatus) returns (google.protobuf.Empty);
-
+	rpc SetRobotsStatus(stream RobotStatus) returns (google.protobuf.Empty);
+	rpc GetRobotsStatus(google.protobuf.Empty) returns (stream RobotStatus);
 }
