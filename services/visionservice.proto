@@ -5,8 +5,10 @@ import "google/protobuf/empty.proto";
 package Armorial.Vision;
 
 service VisionService {
-	rpc SetRobot(Robot) returns (google.protobuf.Empty) {}
 	rpc SetRobots(stream Robot) returns (google.protobuf.Empty) {}
 	rpc SetBall(Ball) returns (google.protobuf.Empty) {}
 	rpc SetField(Field) returns (google.protobuf.Empty) {}
+	rpc GetRobots(Color) returns (stream Robot);
+	rpc GetBall(google.protobuf.Empty) returns (Ball);
+	rpc GetField(google.protobuf.Empty) returns (Field); 
 }
