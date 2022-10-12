@@ -8,4 +8,6 @@ package Armorial.Actuator;
 service ActuatorService {
 	rpc SetControls(stream ControlPacket) returns (google.protobuf.Empty);
 	rpc GetControls(google.protobuf.Empty) returns (stream ControlPacket);
+	rpc Check(HealthCheckRequest) returns (HealthCheckResponse);
+	rpc Watch(HealthCheckRequest) returns (stream HealthCheckResponse);
 }
