@@ -53,8 +53,9 @@ message Field {
 	float defenseLength                  = 6;
 	float boundaryWidth                  = 7;
 	float centerRadius                   = 8;
-	repeated FieldLineSegment fieldLines = 9;
-	repeated FieldCircularArc fieldArcs  = 10;
+	float penaltyMarkDistanceFromGoal    = 9;
+	repeated FieldLineSegment fieldLines = 10;
+	repeated FieldCircularArc fieldArcs  = 11;
 }
 
 message FieldLineSegment {
