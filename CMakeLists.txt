@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # Generate protos
-file(GLOB PROTO_DIRS LIST_DIRECTORIES true referee services simulation)
+file(GLOB PROTO_DIRS LIST_DIRECTORIES true amun referee services simulation)
 
 foreach (DIR ${PROTO_DIRS})
   set(INPUT_DIRECTORY ${DIR})

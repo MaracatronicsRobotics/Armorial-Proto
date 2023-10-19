@@ -1,0 +1,11 @@
+syntax = "proto2";
+
+import "amun_grsim_commands.proto";
+import "amun_grsim_replacement.proto";
+
+package amun;
+
+message grSim_Packet {
+    optional grSim_Commands commands = 1;
+    optional grSim_Replacement replacement = 2;
+}
