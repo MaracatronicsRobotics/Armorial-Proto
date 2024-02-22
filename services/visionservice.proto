@@ -5,6 +5,8 @@ import "google/protobuf/empty.proto";
 
 package Armorial.Vision;
 
+option go_package = "Armorial/include/proto";
+
 service VisionService {
 	rpc GetRobots(Color) returns (stream Robot);
 	rpc GetBall(google.protobuf.Empty) returns (Ball);

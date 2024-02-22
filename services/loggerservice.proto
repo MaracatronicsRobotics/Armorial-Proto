@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "messages.proto";
+import "google/protobuf/empty.proto";
+
+package Armorial.Logger;
+
+option go_package = "Armorial/include/proto";
+
+service LoggerService {
+    rpc SetLog(Log) returns (google.protobuf.Empty);
+    rpc GetLogList(google.protobuf.Empty) returns (LogList);
+    rpc GetLog(LogRequest) returns (Log);
+    rpc GetLogStream(stream LogRequest) returns (stream Log);
+	rpc Check(HealthCheckRequest) returns (HealthCheckResponse);
+	rpc Watch(HealthCheckRequest) returns (stream HealthCheckResponse);
+}

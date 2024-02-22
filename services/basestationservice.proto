@@ -5,6 +5,8 @@ import "google/protobuf/empty.proto";
 
 package Armorial.BaseStation;
 
+option go_package = "Armorial/include/proto";
+
 service BaseStationService {
 	rpc SetControls(stream ControlPacket) returns (google.protobuf.Empty);
 	rpc GetRobotsStatus(google.protobuf.Empty) returns (stream RobotStatus);

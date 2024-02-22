@@ -2,6 +2,11 @@ syntax = "proto3";
 
 package Armorial;
 
+option go_package = "Armorial/include/proto";
+
+import "ssl_gc_referee_message.proto";
+import "ssl_vision_wrapper.proto";
+
 message HealthCheckRequest {
 	string service = 1;
 }
@@ -17,13 +22,14 @@ message HealthCheckResponse {
 }
 
 message Robot {
-	RobotIdentifier robotIdentifier = 1;
-	Position robotPosition          = 2;
-	Angle robotOrientation          = 3;
-	Velocity robotVelocity          = 4;
-	Acceleration robotAcceleration  = 5;
-	AngularSpeed robotAngularSpeed  = 6;
-	RobotStatus robotStatus         = 7;
+	RobotIdentifier robotIdentifier 	= 1;
+	Position robotPosition          	= 2;
+	Angle robotOrientation          	= 3;
+	Velocity robotVelocity          	= 4;
+	Acceleration robotAcceleration 		= 5;
+	AngularSpeed robotAngularSpeed 		= 6;
+	RobotStatus robotStatus         	= 7;
+	RobotCoachStatus robotCoachStatus   = 8;
 }
 
 message Ball {
@@ -126,4 +132,78 @@ message AngularSpeed {
 	float vw         = 1;
 	bool isInDegrees = 2;
 	bool isInvalid   = 3;
+}
+
+message TimeStamp {
+	uint64 seconds = 1;
+	uint32 nanos   = 2;
+}
+
+message LogRequest {
+    string name = 1;
+    TimeStamp timestamp = 2;
+}
+
+message Log {
+    string name = 1;
+    LogReferee referee = 2;
+    LogVision vision = 3;
+	LogCoach coach = 4;
+}
+
+message LogInfo {
+	string name = 1;
+	TimeStamp duration = 2;
+}
+
+message LogList {
+	repeated LogInfo logs = 1;
+}
+
+message LogReferee {
+	TimeStamp timestamp = 1;
+	Referee referee = 2;
+}
+
+message LogVision {
+	TimeStamp timestamp = 1;
+	SSL_WrapperPacket packet = 2;
+}
+
+message LogCoach {
+	TimeStamp timestamp = 1;
+	Coach coach = 2;
+}
+
+message Coach {
+	string coordinatorName 		  = 1;
+	string formationName   		  = 2;
+	repeated Robot robots  		  = 3;
+	repeated ProtoDict parameters = 4;
+}
+
+message RobotCoachStatus {
+	Role role = 1;
+	Behavior behavior = 2;
+	Skill skill = 3;
+}
+
+message Role {
+	string name					 = 1;
+	repeated ProtoDict variables = 2;
+}
+
+message Behavior {
+	string name					 = 1;
+	repeated ProtoDict variables = 2;
+}
+
+message Skill {
+	string name					 = 1;
+	repeated ProtoDict variables = 2;
+}
+
+message ProtoDict {
+	string key = 1;
+	string value = 2;
 }
