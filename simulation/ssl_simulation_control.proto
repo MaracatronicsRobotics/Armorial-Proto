@@ -1,5 +1,5 @@
 syntax = "proto2";
-option go_package = "Armorial-Go/Include/Proto/Simulation/ssl-simulation-protocol/pkg/sim";
+option go_package = "Armorial-Go/Include/Proto/Simulation";
 
 import "ssl_gc_common.proto";
 import "ssl_simulation_config.proto";

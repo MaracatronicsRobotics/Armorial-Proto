@@ -1,5 +1,5 @@
 syntax = "proto2";
-option go_package = "Armorial-Go/Include/Proto/Simulation/ssl-simulation-protocol/pkg/sim";
+option go_package = "Armorial-Go/Include/Proto/Simulation";
 
 // Full command for a single robot
 message RobotCommand {
