@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package Armorial;
 
-option go_package = "Armorial/include/proto";
+option go_package = "Armorial/Include/Proto/Services";
 
 import "ssl_gc_referee_message.proto";
 import "ssl_vision_wrapper.proto";

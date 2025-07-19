@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-option go_package = "Armorial/include/proto";
+option go_package = "Armorial/Include/Proto/Services";
 
 import "ssl_gc_common.proto";
 import "ssl_gc_geometry.proto";
