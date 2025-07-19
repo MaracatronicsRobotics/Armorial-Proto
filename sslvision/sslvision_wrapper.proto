@@ -1,9 +1,10 @@
 syntax = "proto2";
 
+package SSLVision;
 option go_package = "Armorial-Go/Include/Proto/SSLVision";
 
-import "ssl_vision_detection.proto";
-import "ssl_vision_geometry.proto";
+import "sslvision_detection.proto";
+import "sslvision_geometry.proto";
 
 message SSL_WrapperPacket {
   optional SSL_DetectionFrame detection = 1;
