@@ -1,5 +1,5 @@
 syntax = "proto2";
-option go_package = "Armorial/Include/Proto/Simulation/ssl-simulation-protocol/pkg/sim";
+option go_package = "Armorial-Go/Include/Proto/Simulation/ssl-simulation-protocol/pkg/sim";
 
 // A 2D float vector.
 message Vector2f {

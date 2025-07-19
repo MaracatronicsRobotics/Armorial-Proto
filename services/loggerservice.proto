@@ -5,7 +5,7 @@ import "google/protobuf/empty.proto";
 
 package Armorial.Logger;
 
-option go_package = "Armorial/Include/Proto/Services";
+option go_package = "Armorial-Go/Include/Proto/Services";
 
 service LoggerService {
     rpc SetLog(Log) returns (google.protobuf.Empty);
